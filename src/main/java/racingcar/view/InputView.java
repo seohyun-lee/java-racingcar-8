@@ -8,9 +8,9 @@ public class InputView {
         String[] cars = Console.readLine().split(",");
         // 글자수 검증
         for (String name : cars) {
-            String trimmed = name.trim();
-            if (trimmed.isEmpty() || trimmed.length() > 5)
-                throw new IllegalArgumentException("자동차 이름은 1~5자여야 합니다: " + trimmed);
+            if (name.isEmpty() || name.length() > 5) {
+                throw new IllegalArgumentException("자동차 이름은 1~5자여야 합니다: " + name);
+            }
         }
         return cars;
     }
